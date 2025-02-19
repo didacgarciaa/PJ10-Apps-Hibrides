@@ -1,22 +1,22 @@
-<header class="bg-[#73CCD4] shadow-md py-4 px-6 flex justify-center items-center">
+<header class="bg-transparent z-40 py-4 px-6 flex justify-center items-center mb-20">
     <div class="flex items-center gap-4 pr-60">
-      <img src="logo-aigua.png" alt="Logo" class="h-10">
+      <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"><img src="logo-aigua.png" alt="Logo" class="h-10"></a>
     </div>
     <nav>
       <ul class="flex gap-6 items-center">
-        <li><a href="#crecimiento" class="relative group block px-4 text-[#110E2F] font-semibold">Creixement
+        <li><a routerLink="/inversio" routerLinkActive="active" ariaCurrentWhenActive="page" class="relative group block px-4 text-[#110E2F] font-semibold">Inversió
           <span class="absolute left-0 -bottom-1 block h-0.5 w-full bg-[#110E2F] scale-x-0 transition-transform duration-300 group-hover:scale-x-80"></span>
         </a></li>
-        <li><a href="#gasto" class="relative group block px-4 text-[#110E2F] font-semibold">Despesa
+        <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="relative group block px-4 text-[#110E2F] font-semibold">Creixement
           <span class="absolute left-0 -bottom-1 block h-0.5 w-full bg-[#110E2F] scale-x-0 transition-transform duration-300 group-hover:scale-x-80"></span>
         </a></li>
-        <li><a href="#comparacion" class="relative group block px-4 text-[#110E2F] font-semibold">Comparació
+        <li><a routerLink="/potabilitat" routerLinkActive="active" ariaCurrentWhenActive="page" class="relative group block px-4 text-[#110E2F] font-semibold">Potabilitat
           <span class="absolute left-0 -bottom-1 block h-0.5 w-full bg-[#110E2F] scale-x-0 transition-transform duration-300 group-hover:scale-x-80"></span>
         </a></li>
-        <li><a href="#inversion" class="relative group block px-4 text-[#110E2F] font-semibold">Inversió
+        <li><a routerLink="/despeses" routerLinkActive="active" ariaCurrentWhenActive="page" class="relative group block px-4 text-[#110E2F] font-semibold">Despesa
           <span class="absolute left-0 -bottom-1 block h-0.5 w-full bg-[#110E2F] scale-x-0 transition-transform duration-300 group-hover:scale-x-80"></span>
         </a></li>
-        <li><a href="#contacto" class="relative group text-[#110E2F] font-bold text-lg">Contacte    
+        <li><a routerLink="/contacte" routerLinkActive="active" ariaCurrentWhenActive="page" class="relative group text-[#110E2F] font-semibold">Contacte    
           <span class="absolute left-0 -bottom-1 block h-0.5 w-full bg-[#110E2F] scale-x-0 transition-transform duration-300 group-hover:scale-x-90"></span>
         </a></li>
       </ul>

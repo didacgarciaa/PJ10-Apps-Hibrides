@@ -29,7 +29,7 @@ export class GraficGastPersonaComponent {
           {
             label: 'Sub-Saharan Africa',
             data: [18, 20, 22, 24, 27, 30], 
-            borderColor: 'rgba(255, 99, 132, 1)',
+            borderColor: '#E59B50',
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             tension: 0.4,
           }

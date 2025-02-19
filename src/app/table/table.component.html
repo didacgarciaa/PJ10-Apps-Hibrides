@@ -1,0 +1,61 @@
+<section class="bg-[#FFFAEB] w-full h-full">
+  <app-header></app-header>
+  <div class="container mx-auto flex items-start justify-between p-5 gap-5">
+    <!-- Sección de la tabla (lado izquierdo) -->
+    <div class="w-[55%] bg-white p-5 rounded-lg shadow">
+      <mat-form-field class="w-full mb-3">
+        <input matInput (keyup)="applyFilter($event)" placeholder="Filter by country" class="w-full p-2 border border-gray-300 rounded">
+      </mat-form-field>
+      <mat-table [dataSource]="dataSource" class="w-full overflow-auto block shadow">
+        <!-- Columnas -->
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef class="bg-[#110E2F] text-[#110E2F] font-bold p-2"> Rank </mat-header-cell>
+          <mat-cell *matCellDef="let element" class="p-2"> {{ element.position }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="country">
+          <mat-header-cell *matHeaderCellDef class="bg-[#110E2F] text-[#110E2F] font-bold p-2"> Country </mat-header-cell>
+          <mat-cell *matCellDef="let element" class="p-2"> {{ element.country }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="waterConsumption">
+          <mat-header-cell *matHeaderCellDef class="bg-[#110E2F] text-[#110E2F] font-bold p-2"> Water Consumption (L/day) </mat-header-cell>
+          <mat-cell *matCellDef="let element" class="p-2"> {{ element.waterConsumption }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="population">
+          <mat-header-cell *matHeaderCellDef class="bg-[#110E2F] text-[#110E2F] font-bold p-2"> Population </mat-header-cell>
+          <mat-cell *matCellDef="let element" class="p-2"> {{ element.population }} </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" class="hover:bg-[#73CCD4] hover:text-[#110E2F]"></mat-row>
+      </mat-table>
+    </div>
+
+    <!-- Sección de información del país (lado derecho) -->
+    <div *ngIf="dataSource.filteredData.length === 1" class="w-[40%] bg-[#73C0D4] p-5 rounded-lg text-[#110E2F] shadow">
+      <div class="country-info">
+        <h1 class="text-2xl pb-5">{{ dataSource.filteredData[0].country }}</h1>
+        <div [ngSwitch]="dataSource.filteredData[0].country">
+          <div *ngSwitchCase="'Nigeria'">
+            <p>Nigeria es un país vibrante con una gran diversidad cultural y una población numerosa, lo que plantea desafíos únicos en el manejo de sus recursos hídricos.</p>
+            <img src="nigeria.jpg" alt="Nigeria" class="w-full rounded-lg mt-3">
+          </div>
+          <div *ngSwitchCase="'South Africa'">
+            <p>South Africa se destaca por su variada geografía y clima, lo que se refleja en patrones de consumo de agua que varían entre sus diferentes regiones.</p>
+            <img src="southafrica.jpg" alt="South Africa" class="w-full rounded-lg mt-3">
+          </div>
+          <div *ngSwitchCase="'Egypt'">
+            <p>Egypt, cuna de una de las civilizaciones más antiguas, depende en gran medida del río Nilo para su agricultura y abastecimiento de agua.</p>
+            <img src="egipto.jpg" alt="Egypt" class="w-full rounded-lg mt-3">
+          </div>
+          <div *ngSwitchCase="'Kenya'">
+            <p>Kenya, famosa por sus paisajes y vida salvaje, enfrenta retos en la distribución del agua entre áreas urbanas y rurales.</p>
+            <img src="kenya.jpg" alt="Kenya" class="w-full rounded-lg mt-3">
+          </div>
+          <div *ngSwitchDefault>
+            <p>Información adicional no disponible para {{ dataSource.filteredData[0].country }}.</p>
+            <img src="africawater.jpg" alt="{{ dataSource.filteredData[0].country }}" class="w-full rounded-lg mt-3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

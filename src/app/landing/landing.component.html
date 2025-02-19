@@ -1,11 +1,14 @@
 <div class="overflow-x-hidden bg-[#73CCD4]">
+    <app-header></app-header>
     <section class="relative py-12 sm:py-16 lg:pt-20 xl:pb-0 flex items-center justify-center mb-30">
-        <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div #animContainer [@fadeInAnimation]="inViewStates[0] ? 'visible' : 'hidden'"
+            class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="max-w-3xl mx-auto">
                 <p class="inline-flex px-4 py-2 text-base bg-[#110E2F] text-[#FFFAEB] rounded-full font-pj">
                     T'informem sobre l'escassetat d'aigua a l'Àfrica
                 </p>
-                <h1 class="mt-5 text-4xl font-bold leading-tight text-[#110E2F] sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-pj">
+                <h1
+                    class="mt-5 text-4xl font-bold leading-tight text-[#110E2F] sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-pj">
                     Crisi d'Aigua a Àfrica: Urgència i Acció per un Futur Sostenible
                 </h1>
                 <p class="max-w-md mt-12 text-base leading-7 text-gray-800 italic font-semibold">
@@ -13,17 +16,70 @@
                 </p>
 
                 <div class="relative inline-flex mt-10 group">
-                    <div class="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
+                    <div
+                        class="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                    </div>
 
-                    <a href="#" title="" class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-[#FFFAEB] transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900" role="button">
+                    <a href="#" title=""
+                        class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-[#FFFAEB] transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                        role="button">
                         Aprèn més sobre el tema
                     </a>
                 </div>
             </div>
         </div>
-        <div class="mt-16 md:mt-20 max-w-xl mx-auto flex items-center mr-50">
-            <img class="object-cover object-top w-full h-auto mx-auto scale-150 2xl:max-w-screen-2xl xl:scale-100" src="hero-banner-image.png" alt="" />
+        <div #animContainer [@fadeInAnimation]="inViewStates[1] ? 'visible' : 'hidden'"
+            class="max-w-xl mx-auto flex justify-center items-center mr-50">
+            <img class="object-cover object-top w-full h-auto mx-auto scale-150 2xl:max-w-screen-2xl xl:scale-100"
+                src="hero-banner-image.png" alt="" />
+        </div>
+
+    </section>
+    <section class="bg-[#110E2F] py-12">
+        <div #animContainer [@fadeInAnimation]="inViewStates[2] ? 'visible' : 'hidden'"
+            class="max-w-[80%] mx-auto p-12 flex">
+            <div class="w-2/5 text-[#FFFAEB] space-y-6">
+                <p class="text-sm font-semibold uppercase tracking-widest text-[#E59B50]">
+                    Desigualtat i reptes en l’accés a l’aigua potable
+                </p>
+                <h1 class="text-4xl font-bold leading-tight">
+                    El consum d’aigua per persona a l’Àfrica: Una anàlisi visual
+                </h1>
+                <p class="text-lg text-[#E0E0E0]">
+                    L’accés a l’aigua a l’Àfrica varia dràsticament entre regions, reflectint diferències en
+                    infraestructura, clima i desenvolupament econòmic. Mentre que en algunes zones urbanes el consum pot
+                    superar els 50 litres diaris per persona, en moltes comunitats rurals la xifra és molt inferior,
+                    sovint per sota dels 20 litres. Aquesta situació posa en evidència la necessitat d’inversions en
+                    recursos hídrics per garantir un accés equitatiu a aquest recurs essencial.
+                </p>
+            </div>
+            <div class="w-3/5 mt-10 pl-20">
+                <app-grafic-gast-persona class="w-full"></app-grafic-gast-persona>
+            </div>
+        </div>
+        <div #animContainer [@fadeInAnimation]="inViewStates[3] ? 'visible' : 'hidden'"
+            class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-[80%] mx-auto px-12">
+
+            <div class="bg-[#FFFAEB] p-4 rounded-xl shadow-sm border border-[#73CCD4]/20">
+                <div class="text-2xl font-bold text-[#E59B50]">37 L/dia</div>
+                <div class="text-sm text-[#110E2F]/80">Àfrica del Nord (2025)</div>
+            </div>
+
+            <div class="bg-[#FFFAEB] p-4 rounded-xl shadow-sm border border-[#73CCD4]/20">
+                <div class="text-2xl font-bold text-[#73CCD4]">30 L/dia</div>
+                <div class="text-sm text-[#110E2F]/80">Àfrica Subsahariana (2025)</div>
+            </div>
+
+            <div class="bg-[#FFFAEB] p-4 rounded-xl shadow-sm border border-[#73CCD4]/20">
+                <div class="text-2xl font-bold text-[#110E2F]">+12 L/dia</div>
+                <div class="text-sm text-[#110E2F]/80">Increment (2000-2025)</div>
+            </div>
+
+            <div class="bg-[#FFFAEB] p-4 rounded-xl shadow-sm border border-[#73CCD4]/20">
+                <div class="text-2xl font-bold text-[#E59B50]">34 L/dia</div>
+                <div class="text-sm text-[#110E2F]/80">Mitjana General (2025)</div>
+            </div>
+
         </div>
     </section>
-
 </div>

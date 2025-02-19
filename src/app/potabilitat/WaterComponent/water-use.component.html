@@ -1,0 +1,57 @@
+<main class="min-h-screen p-6 bg-[#FFFAEB] ">
+  <app-header></app-header>
+  <div class="max-w-[80%] mx-auto">
+    <div class="mb-12 text-center">
+      <h1 class="text-4xl font-bold mb-4 text-[#110E2F]">
+        <span class="block text-[#73CCD4]">Accés d'Aigua</span>
+        <span class="block mt-2">A l'Àfrica</span>
+      </h1>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-lg text-[#110E2F]/90 leading-relaxed border-t-4 border-[#E59B50] pt-4">
+          L'Àfrica continua enfrontant-se a reptes significatius en l'accés a l'aigua potable.
+          Aquest informe proporciona una visió general de la situació actual, els progressos realitzats
+          i els desafiaments pendents en el continent africà.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sección de estadísticas -->
+    <section class="mb-16">
+      <app-water-stats></app-water-stats>
+    </section>
+
+    <!-- Gráficos principales -->
+    <section class="mb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12">
+        <app-water-access-chart></app-water-access-chart>
+
+        <app-water-distribution-chart></app-water-distribution-chart>
+
+      </div>
+    </section>
+
+    <!-- Comparación regional -->
+    <section class="mb-16">
+      <app-regional-comparison-chart></app-regional-comparison-chart>
+    </section>
+
+    <!-- Tabla de datos -->
+    <section class="mb-16">
+      <app-water-data-table></app-water-data-table>
+    </section>
+
+    <!-- Sección de desafíos y consejos -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+      <app-water-challenges></app-water-challenges>
+      <app-water-tips></app-water-tips>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="pt-8 border-t-4 border-[#73CCD4]/20">
+      <p class="text-center text-[#110E2F]/80">
+        Dades actualitzades a 2023 | Font: Organització Mundial de la Salut
+      </p>
+    </footer>
+  </div>
+
+</main>
