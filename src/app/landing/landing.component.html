@@ -1,6 +1,6 @@
-<div class="overflow-x-hidden bg-[#73CCD4]">
+<main class="overflow-x-hidden bg-[#73CCD4]">
     <app-header></app-header>
-    <section class="relative py-12 sm:py-16 lg:pt-20 xl:pb-0 flex items-center justify-center mb-30">
+    <section class="relative py-12   flex items-center justify-center mb-30">
         <div #animContainer [@fadeInAnimation]="inViewStates[0] ? 'visible' : 'hidden'"
             class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="max-w-3xl mx-auto">
@@ -82,4 +82,26 @@
 
         </div>
     </section>
-</div>
+    <section class="w-full h-full bg-[#B4ECFF] p-8">
+        <p class="uppercase text-center text-[#110E2F] text-lg mt-12">
+            Temes rellevants
+        </p>
+        <h2 class="text-4xl font-semibold text-center mb-6 text-[#110E2F] mb-20">Apren sobre l'escasetat d'aigua a l'Àfrica</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-20 max-w-[55%] mx-auto">
+            <div *ngFor="let tema of temas; let i = index"
+                class="bg-[#FFFAEB] text-[#110E2F] hover:bg-[#110E2F] hover:text-[#FFFAEB] p-6 rounded-4xl shadow-md transition duration-300">
+                <h2 class="text-3xl font-bold my-2">{{ tema.titulo }}.</h2>
+                <!-- Imagen más pequeña con object-contain -->
+                <img [src]="tema.imagen" alt="{{ tema.titulo }}" class="object-contain rounded-md mb-4 h-24">
+                <p class="text-base">{{ tema.cuerpo }}</p>
+
+                <a [routerLink]="tema.link" class="relative group inline-block font-semibold absolute-bottom mt-4">
+                    Aprèn més
+                    <span
+                        class="absolute left-0 -bottom-1 h-0.5 w-full bg-[#FFFAEB] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                </a>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </section>
+</main>

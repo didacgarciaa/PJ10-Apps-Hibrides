@@ -4,11 +4,12 @@ import { GraficGastPersonaComponent } from '../grafic-gast-persona/grafic-gast-p
 import { trigger, transition, style, animate, state } from '@angular/animations';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
+import { RouterLinkActive, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [CommonModule, GraficGastPersonaComponent,HeaderComponent,FooterComponent],
+  imports: [CommonModule, GraficGastPersonaComponent,HeaderComponent,FooterComponent, RouterLinkActive, RouterLink ],
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css'],
   animations: [
@@ -20,6 +21,30 @@ import { FooterComponent } from '../footer/footer.component';
   ]
 })
 export class LandingComponent implements AfterViewInit {
+
+  temas = [
+    {
+      titulo: 'Inversió',
+      cuerpo: 'La inversió és clau per garantir el creixement sostenible i maximitzar els beneficis a llarg termini. Una bona estratègia d’inversió permet mitigar riscos i aprofitar oportunitats en diferents mercats, millorant així la rendibilitat de l’entitat o persona que l’adopti.',
+      link: '/inversio',
+      imagen: 'inversio.png' 
+    },
+    {
+      titulo: 'Potabilitat',
+      cuerpo: 'Els processos de tractament de l’aigua asseguren la seva qualitat i eliminen els contaminants per a un ús segur. Aquests processos impliquen una sèrie de tècniques d’anàlisi i purificació que garanteixen que l’aigua compleixi amb els estàndards de seguretat i qualitat, evitant problemes de salut pública.',
+      link: '/potabilitat',
+      imagen: 'gota.png'  
+    },
+    {
+      titulo: 'Despesa',
+      cuerpo: 'Una bona gestió de la despesa permet mantenir l’equilibri financer i optimitzar els recursos disponibles. Implementar controls rigorosos sobre la despesa ajuda a evitar despeses innecessàries i a dirigir els recursos cap a àrees de creixement i rendiment òptim.',
+      link: '/despeses',
+      imagen: 'despeses.png' 
+    }
+  ];
+  
+  
+
   inViewStates: boolean[] = []; 
   @ViewChildren('animContainer') animContainers!: QueryList<ElementRef>; 
 
