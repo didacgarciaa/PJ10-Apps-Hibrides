@@ -83,11 +83,11 @@
         </div>
     </section>
     <section class="w-full h-full bg-[#B4ECFF] p-8">
-        <p class="uppercase text-center text-[#110E2F] text-lg mt-12">
+        <p #animContainer [@fadeInAnimation]="inViewStates[4] ? 'visible' : 'hidden'" class="uppercase text-center text-[#110E2F] text-lg mt-12">
             Temes rellevants
         </p>
-        <h2 class="text-4xl font-semibold text-center mb-6 text-[#110E2F] mb-20">Apren sobre l'escasetat d'aigua a l'Àfrica</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-20 max-w-[55%] mx-auto">
+        <h2 #animContainer [@fadeInAnimation]="inViewStates[5] ? 'visible' : 'hidden'" class="text-4xl font-semibold text-center mb-6 text-[#110E2F] mb-20">Apren sobre l'escasetat d'aigua a l'Àfrica</h2>
+        <div #animContainer [@fadeInAnimation]="inViewStates[6] ? 'visible' : 'hidden'" class="grid grid-cols-1 md:grid-cols-3 gap-20 max-w-[55%] mx-auto">
             <div *ngFor="let tema of temas; let i = index"
                 class="bg-[#FFFAEB] text-[#110E2F] hover:bg-[#110E2F] hover:text-[#FFFAEB] p-6 rounded-4xl shadow-md transition duration-300">
                 <h2 class="text-3xl font-bold my-2">{{ tema.titulo }}.</h2>
