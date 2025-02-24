@@ -34,8 +34,8 @@ export class TableComponent {
 export interface WaterConsumptionData {
   position: number;
   country: string;
-  waterConsumption: string; // Litros per cápita por día
-  population: string; // Millones de habitantes
+  waterConsumption: string;  
+  population: string;  
 }
 
 const WATER_CONSUMPTION_DATA: WaterConsumptionData[] = [
