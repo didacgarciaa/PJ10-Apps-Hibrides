@@ -91,7 +91,6 @@
             <div *ngFor="let tema of temas; let i = index"
                 class="bg-[#FFFAEB] text-[#110E2F] hover:bg-[#110E2F] hover:text-[#FFFAEB] p-6 rounded-4xl shadow-md transition duration-300">
                 <h2 class="text-3xl font-bold my-2">{{ tema.titulo }}.</h2>
-                <!-- Imagen más pequeña con object-contain -->
                 <img [src]="tema.imagen" alt="{{ tema.titulo }}" class="object-contain rounded-md mb-4 h-24">
                 <p class="text-base">{{ tema.cuerpo }}</p>
 
