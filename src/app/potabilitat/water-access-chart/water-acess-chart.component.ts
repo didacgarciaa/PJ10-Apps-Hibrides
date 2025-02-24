@@ -7,7 +7,7 @@ import { Chart } from "chart.js/auto"
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="mb-8 p-6 bg-[#FFFAEB] rounded-lg shadow-md">
+    <section class="mb-8 p-6 bg-[#FFFAEB] border-2 border-[#E59B50] rounded-lg shadow-md">
       <h2 class="text-xl font-bold mb-4 text-[#110E2F] border-b-2 border-[#E59B50] pb-2">
         Evolució de l'accés a l'aigua potable a l'Àfrica
       </h2>

@@ -6,7 +6,7 @@ import { CommonModule } from "@angular/common"
   standalone: true,
   imports: [CommonModule],
   template: `
-  <section class="mb-8 p-6 bg-[#FFFAEB] rounded-lg shadow-md">
+  <section class="mb-8 p-6 bg-[#FFFAEB] border-2 border-[#73CCD4] rounded-lg shadow-md">
     <h2 class="text-2xl font-bold mb-4 text-[#110E2F] border-b-2 border-[#73CCD4] pb-2">
       Reptes en l'accés a l'aigua a l'Àfrica
     </h2>
