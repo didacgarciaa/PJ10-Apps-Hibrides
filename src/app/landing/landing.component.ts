@@ -4,12 +4,12 @@ import { GraficGastPersonaComponent } from '../grafic-gast-persona/grafic-gast-p
 import { trigger, transition, style, animate, state } from '@angular/animations';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
-import { RouterLinkActive, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [CommonModule, GraficGastPersonaComponent,HeaderComponent,FooterComponent, RouterLinkActive, RouterLink ],
+  imports: [CommonModule, GraficGastPersonaComponent,HeaderComponent,FooterComponent, RouterLink ],
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css'],
   animations: [
